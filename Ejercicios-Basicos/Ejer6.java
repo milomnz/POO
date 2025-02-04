@@ -1,19 +1,29 @@
 import java.util.Scanner;
+
 public class Ejer6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String dia = sc.nextLine();
-        dia = dia.toLowerCase();
+        System.out.println("Introduce un día de la semana:");
+        String dia = sc.nextLine().toLowerCase();  
+
         switch (dia) {
-            case "lunes" -> System.out.println("El dia es laborable");
-            case "martes" -> System.out.println("El dia es laborable");   
-            case "miercoles" -> System.out.println("El dia es laborable");
-            case "jueves" -> System.out.println("El dia es laborable");
-            case "viernes" -> System.out.println("El dia es laborable");
-            case "sabado" -> System.out.println("El dia es laborable");
-            case "domingo" -> System.out.println("Este dia no se trabaja");
+            case "lunes":
+            case "martes":
+            case "miercoles":
+            case "jueves":
+            case "viernes":
+                System.out.println("El día es laborable");
+                break;
+
+            case "sabado":
+            case "domingo":
+                System.out.println("Este día no se trabaja");
+                break;
+
+            default:
+                System.out.println("Día no válido, por favor introduce un día correcto.");
         }
-        sc.close();
+
+        sc.close(); 
     }
 }
-
